@@ -2,9 +2,6 @@
 
 var api_key = "6e8138877465eaa1373daf4702c486e7";
 
-// uv index but only takes in latitude and longitude
-var onecallUrl = `api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}`;
-
 // --------------------HTML ELEMENTS-----------------------------
 var $btn = document.querySelector(".btn");
 var $form = document.querySelector(".form-input");
@@ -107,7 +104,7 @@ function createCurrentWeather(weather) {
   $img.setAttribute("src", iconSource);
 
   //   Temperature
-  // Convert KELVIN ----> Farenheit
+  //convert Kelvin to farenheit
   var tempKelvin = weather.main.temp;
   var tempF = Math.floor(1.8 * (tempKelvin - 273) + 32) + " ° ";
 
